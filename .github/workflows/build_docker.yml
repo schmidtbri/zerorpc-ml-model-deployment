@@ -1,0 +1,21 @@
+name: "Build Docker Image"
+
+on:
+  push:
+    branches:
+    - master
+  release:
+    types: [published]
+
+jobs:
+  build-image:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: "Publish to Registry"
+        uses: HurricanKai/Publish-Docker-Github-Action@master
+        with:
+          name: bschmidt135/zerorpc-ml-model-deployment
+          password: "${{ secrets.DOCKER_PASSWORD }}"
+          username: "${{ secrets.DOCKER_USERNAME }}"
+          tagging: true
