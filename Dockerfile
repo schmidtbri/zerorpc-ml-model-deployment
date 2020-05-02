@@ -13,4 +13,4 @@ RUN make dependencies
 ENV PATH="./:$PATH"
 ENV PYTHONPATH "./"
 
-CMD [ "gunicorn", "--worker-class", "eventlet", "-w", "1", "-b", "0.0.0.0:80", "model_zerorpc_service:app" ]
+CMD [ "python", "model_zerorpc_server/service.py" ]

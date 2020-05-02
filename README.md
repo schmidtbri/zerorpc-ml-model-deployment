@@ -39,7 +39,9 @@ make dependencies
 
 Start the development server:
 ```bash
-make start-server
+export PYTHONPATH=./
+export APP_SETTINGS=ProdConfig
+python model_zerorpc_service/service.py
 ```
 
 ## Running the Unit Tests
@@ -53,15 +55,6 @@ make test
 
 # clean up the unit tests
 make clean-test
-```
-
-## Running the Service
-To run the service, run these commands:
-
-```bash
-export PYTHONPATH=./
-export APP_SETTINGS=ProdConfig
-gunicorn --worker-class eventlet -w 1 -b 0.0.0.0:80 model_zerorpc_service:app
 ```
 
 ## Docker

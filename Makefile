@@ -52,6 +52,7 @@ clean-test:	## Remove test artifacts
 	rm -rf .pytest_cache
 	rm -rf .coverage
 	rm -rf reports
+	rm -rf .pytype
 
 check-codestyle:  ## checks the style of the code against PEP8
 	pycodestyle model_zerorpc_service --max-line-length=120
@@ -68,8 +69,14 @@ check-dependencies:  ## checks for security vulnerabilities in dependencies
 check-codemetrics:  ## calculate code metrics of the package
 	radon cc model_zerorpc_service
 
+check-pytype:  ## perform static code analysis
+	pytype model_zerorpc_service
+
 test-models-endpoint: ## test the models endpoint
-	curl --request GET --url http://localhost:80/api/models
+	python scripts/get_models.py
 
 test-metadata-endpoint: ## test the metadata endpoint
-	curl --request GET --url http://localhost:80/api/models/iris_model/metadata
+	c python scripts/get_model_metadata.py
+
+test-predict:  ## test the prediction endpoint
+	python scripts/predict_with_model.py

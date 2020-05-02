@@ -43,6 +43,9 @@ jobs:
     - name: Check Dependency Security
       run: make check-dependencies
 
+    - name: Check Static Analysis
+      run: make check-pytype
+
     - name: Run Unit Tests
       run: make test-reports
 

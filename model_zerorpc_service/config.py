@@ -15,22 +15,22 @@ class Config(dict):
 class ProdConfig(Config):
     """Configuration for the prod environment."""
 
-    service_port = "[::]:50051"
+    service_port = "tcp://0.0.0.0:4242"
 
 
 class BetaConfig(Config):
     """Configuration for the beta environment."""
 
-    service_port = "[::]:50051"
+    service_port = "tcp://0.0.0.0:4242"
 
 
 class TestConfig(Config):
     """Configuration for the test environment."""
 
-    service_port = "[::]:50051"
+    service_port = "tcp://0.0.0.0:4242"
 
 
 class DevConfig(Config):
     """Configuration for the dev environment."""
 
-    service_port = "[::]:50051"
+    service_port = "tcp://0.0.0.0:4242"

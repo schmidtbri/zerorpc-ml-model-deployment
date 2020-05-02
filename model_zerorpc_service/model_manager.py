@@ -21,6 +21,9 @@ class ModelManager(object):
             if not isinstance(model_object, MLModel):
                 raise ValueError("The ModelManager can only hold references to objects of type MLModel.")
 
+            if model_object.qualified_name in [model.qualified_name for model in cls._models]:
+                raise ValueError("A model with the same qualified name is already in this instance of ModelManager.")
+
             # saving the model reference to the models list
             cls._models.append(model_object)
 
