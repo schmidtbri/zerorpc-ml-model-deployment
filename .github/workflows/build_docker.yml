@@ -13,9 +13,9 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: "Publish to Registry"
-        uses: HurricanKai/Publish-Docker-Github-Action@master
+        uses: docker/build-push-action@v1
         with:
-          name: bschmidt135/zerorpc-ml-model-deployment
-          password: "${{ secrets.DOCKER_PASSWORD }}"
           username: "${{ secrets.DOCKER_USERNAME }}"
-          tagging: true
+          password: "${{ secrets.DOCKER_PASSWORD }}"
+          repository: bschmidt135/zerorpc-ml-model-deployment
+          tags: latest
