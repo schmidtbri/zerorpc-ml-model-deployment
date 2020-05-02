@@ -13,4 +13,4 @@ RUN make dependencies
 ENV PATH="./:$PATH"
 ENV PYTHONPATH "./"
 
-CMD [ "python", "model_zerorpc_server/service.py" ]
+CMD [ "python", "./model_zerorpc_service/service.py" ]

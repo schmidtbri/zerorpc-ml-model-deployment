@@ -65,7 +65,7 @@ docker build -t model-zerorpc-service:latest .
 
 To run the image, execute this command:
 ```bash
-docker run -d -p 80:80 --env APP_SETTINGS=ProdConfig model-zerorpc-service
+docker run -d -p 4242:4242 --env APP_SETTINGS=ProdConfig model-zerorpc-service
 ```
 
 To watch the logs coming from the image, execute this command:

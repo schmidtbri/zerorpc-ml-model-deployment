@@ -76,7 +76,7 @@ test-models-endpoint: ## test the models endpoint
 	python scripts/get_models.py
 
 test-metadata-endpoint: ## test the metadata endpoint
-	c python scripts/get_model_metadata.py
+	python scripts/get_model_metadata.py
 
-test-predict:  ## test the prediction endpoint
+test-predict-endpoint:  ## test the iris_model prediction endpoint
 	python scripts/predict_with_model.py
