@@ -3,18 +3,7 @@ Date: 2020-05-04 09:26
 Category: Blog
 Slug: zerorpc-ml-model-deployment
 Authors: Brian Schmidt
-Summary: There are many different ways for two software processes to communicate
-with each other. When deploying a machine learning model, it's often
-simpler to isolate the model code inside of its own process. Any code
-that needs to use the model to make predictions then needs to
-communicate with the process that is running the model code to make
-predictions. This approach is easier than embedding the model code in
-the process that needs the predictions because it saves us the trouble
-of recreating the model's algorithm in the programming language of the
-process that needs the predictions. RPC calls are also used widely to
-connect code that is executing in different processes. In the last few
-years, the rise in popularity of microservice architectures has also
-caused the rise in popularity of RPC for integrating systems.
+Summary: There are many different ways for two software processes to communicate with each other. When deploying a machine learning model, it's often simpler to isolate the model code inside of its own process. Any code that needs to use the model to make predictions then needs to communicate with the process that is running the model code to make predictions. This approach is easier than embedding the model code in the process that needs the predictions because it saves us the trouble of recreating the model's algorithm in the programming language of the process that needs the predictions. RPC calls are also used widely to connect code that is executing in different processes. In the last few years, the rise in popularity of microservice architectures has also caused the rise in popularity of RPC for integrating systems.
 
 This blog post builds on the ideas started in
 [three]({filename}/articles/a-simple-ml-model-base-class/post.md)
