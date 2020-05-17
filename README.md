@@ -5,7 +5,7 @@
 
 Deploying an ML model in a ZeroRPC service.
 
-This code is used in this [blog post]().
+This code is used in this [blog post](https://medium.com/@brianschmidt_78145/a-zerorpc-ml-model-deployment-8d88b78f8ed6).
 
 ## Requirements
 Docker
