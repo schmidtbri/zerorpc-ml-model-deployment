@@ -3,7 +3,7 @@ future==0.18.2
 gevent==20.4.0
 greenlet==0.4.15
 git+https://github.com/schmidtbri/ml-model-abc-improvements#egg=iris_model
-joblib==0.14.1
+joblib==1.2.0
 msgpack==1.0.0
 numpy==1.18.3
 pyzmq==19.0.0
